@@ -5,7 +5,7 @@ function formatTimeInSecs($timeInSec){
         
   $hourString = $hour >= 1 ? $hour."h" : "";//attach 'h' to hour if hour is not less than one.
         
-  $secsLeft = $timeInSec%3600;//get the number of secs left after removing the hours which is equivalnt to the modulus of $timeInSec
+  $secsLeft = $timeInSec%3600;//get the number of secs left after removing the hours which is equivalent to the modulus of $timeInSec
   
   if($secsLeft < 60){
     $minuteString = "0m";//if the number of secs is less than 60, we set minute to 0
