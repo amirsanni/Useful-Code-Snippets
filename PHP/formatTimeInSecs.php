@@ -1,25 +1,24 @@
 <?php
 
 function formatTimeInSecs($timeInSec){
-  $hour = (int)$timeInSec/3600;//get the number of hours
+  $hour = (int)($timeInSec/3600);//get the number of hours
         
-  $hourString = $hour >= 1 ? $hour."h" : "";//attach 'h' to hour if hour is not less than one.
+  $hourString = $hour >= 1 ? $hour."h" : "";//attach 'h' to hour if hour is not less than one, else set string as empty.
         
   $secsLeft = $timeInSec%3600;//get the number of secs left after removing the hours which is equivalent to the modulus of $timeInSec
   
   if($secsLeft < 60){
-    $minuteString = "0m";//if the number of secs is less than 60, we set minute to 0
+    $minuteString = "0m";//if the number of secs is less than 60, we set minute to 0 meaning the number of secs left is not up to a min
     $secString = $secsLeft ."s";//and set secs to the number of secs
     
     $minAndSecString = $minuteString . " " . $secString;//then concatenate the two strings
   }
   
-  else{
-    $minAndSecString = minuteAndSec($secsLeft);//call function to calculate
-    $minute = (int) ($timeInSec / 60); //get the number of minutes
-    $minuteString = $minute ? $minute . "m" : "";
+  else{//else, we get the number of minutes left and the number of seconds left
+    $minute = (int) ($secsLeft / 60); //get the number of minutes left
+    $minuteString = $minute >= 1 ? $minute . "m" : "";
 
-    $sec = $timeInSec % 60; //get the number of secs
+    $sec = $secsLeft % 60; //get the number of secs left
     $secString = $sec ? $sec . "s" : "";
 
     $minAndSecString = $minuteString . " " . $secString;
