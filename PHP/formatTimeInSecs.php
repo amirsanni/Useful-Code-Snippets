@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * @author Amir Sanni <amirsanni@gmail.com>
+ * @date 11th March, 2016
+ */
 function formatTimeInSecs($timeInSec){
   $hour = (int)($timeInSec/3600);//get the number of hours
         
