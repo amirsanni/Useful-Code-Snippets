@@ -1,5 +1,5 @@
 /**
-* Create a new file by merging multiple files together
+* Create a new file by merging multiple files together. Very handy while trying to merge js and css files
 * @param string $src_dir directory to scan for files to merge (must end with a trailing slash)
 * @param string $dest_dir directory to save the merged files (must end with a trailing slash)
 * @param string $file_name the name to save the newly created file with (including the file extension)
