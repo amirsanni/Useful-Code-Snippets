@@ -1,7 +1,9 @@
 <?php
 /*
  * @author Amir Sanni <amirsanni@gmail.com>
+ * @description Function takes a time in sec and return it in a more human friendly format (e.g. 10hrs, 20mins)
  * @date 11th March, 2016
+ * @param $timeInSec the time to format (in secs)
  */
 function formatTimeInSecs($timeInSec){
   $hour = (int)($timeInSec/3600);//get the number of hours
