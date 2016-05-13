@@ -3,7 +3,7 @@
  * @param int $minLength minimum length of string to generate
  * @param int $maxLength maximum length of string to generate
  * @param string $delimiter [optional] The string to put in between the first and second strings. Default is underscore. Pass an empty str if you don't want a delimiter
- * @return string $code the new randomly generated code
+ * @return string $rand_str the new randomly generated string
  */
 function generateRandomCode($minLength, $maxLength, $delimiter = "_"){
   //randomly generate the final length of the string we want to generate, ensuring it's between the min and max length provided by the user
