@@ -14,6 +14,9 @@ function generateRandomCode($codeType, $minLength, $maxLength, $delimiter = "_")
   $b4_ = rand(1, $totLength-1);//number of strings before the delimiter
   $afta_ = $totLength - $b4_;//number of strings after the delimiter
   
+  //let's generate two random strings using CI's random_string function and merge them together
+  //Ensure you autoload CI's string helper or load it here manually
+  //e.g. $this->load->helper("string");
   $rand_str = random_string($codeType, $b4_) . $delimiter . random_string($codeType, $afta_);
   
   return $rand_str;
