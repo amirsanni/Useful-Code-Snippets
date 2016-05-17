@@ -58,5 +58,13 @@ def hrMinSec(timeInSec):
   return hrstr+" "+minandsecstr
 
 
-//call function
-print(formatTimeInSec(3750))
+
+while True:
+  print("Input time (in seconds) or letter q to quit")
+  inputtedTime = input()
+
+  if inputtedTime == "q":
+    break
+
+  else:
+    print(formatTimeInSec(inputtedTime))
