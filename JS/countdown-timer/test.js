@@ -72,7 +72,7 @@ function startCounter(timeInSec, callback){
 
 
 window.addEventListener('load', function(){
-	startCounter('65', function(){
+	startCounter('360', function(){
 		//do something
 		console.log("time up");
 	});
