@@ -35,3 +35,7 @@ function startCounter(){
         
     }, 1000);
 }
+
+
+
+startCounter();
