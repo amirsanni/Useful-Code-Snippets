@@ -37,5 +37,4 @@ function startCounter(){
 }
 
 
-
-startCounter();
+window.addEventListener('load', startCounter);
