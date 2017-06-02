@@ -7,7 +7,7 @@
 * @return boolean
 */
 public function combine_files($src_dir, $dest_dir, $file_name, $exceptions=[]){
-	$content = "";//to hold the contents of all the files
+  $content = "";//to hold the contents of all the files
   $files_to_exempt = ['', '.', '..'];//will be removed by default
   $filtered_array = [];//to hold the names of files to be merged after removing the exceptions
   
@@ -28,13 +28,15 @@ public function combine_files($src_dir, $dest_dir, $file_name, $exceptions=[]){
     }
   }
 
-	//get the content of each file and add to $content
-	foreach($filtered_array as $fn){
+  //get the content of each file and add to $content
+  foreach($filtered_array as $fn){
     $content .= file_get_contents($src_dir.$fn);
-	}
+  }
 	
-	//write content to new file
-	$done = file_put_contents($dest_dir.$file_name, $content);
+  //write content to new file
+  return (bool)file_put_contents($dest_dir.$file_name, $content);
+
+  //$done = file_put_contents($dest_dir.$file_name, $content);
   
-  return $done ? TRUE : FALSE;
+  //return $done ? TRUE : FALSE;
 }
